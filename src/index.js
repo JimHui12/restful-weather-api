@@ -21,4 +21,4 @@ app.use(routes);
 app.use(notFoundHandler);
 
 
-app.listen(PORT, () => console.log(`app listen on port ${PORT}`));
+app.listen(PORT, () => logger.info(`app listen on port ${PORT}`));
