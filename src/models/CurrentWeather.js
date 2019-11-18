@@ -13,11 +13,14 @@ class CurrentWeather {
     }
 
     calculateWindDirection(degree) {
-        return '';
+        const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+        const value = Math.floor((degree + 22.5) / 45);
+        return directions[value % 8];
     }
 
     calculateFahrenheit(celsius) {
-        return ;
+        const fahrenheit = (celsius * 9) / 5 + 32;
+        return Number.parseFloat(fahrenheit.toFixed(2));
     }
 }
 

@@ -8,4 +8,6 @@ const instance = axios.create({
     }
 });
 
+console.log(process.env.APPID);
+
 module.exports = instance;
