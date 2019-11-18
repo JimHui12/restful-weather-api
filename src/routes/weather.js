@@ -7,7 +7,10 @@ const APPID = process.env.APPID;
 
 router.get('/:cc/:city', (req, res) => {
     const {cc, city} = req.params;
-    weather.getData(city, cc).then(response => {
+    const weatherType = req.query.weatherType;
+    weather
+    .getData(city, cc, weatherType)
+    .then(response => {
         res.send(response);
     })
     .catch(err => console.log(err));
