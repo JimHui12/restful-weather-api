@@ -3,13 +3,13 @@ class CurrentWeather {
         const {main, weather, wind} = rawData;
         this.minCelsius = main.temp_min;
         this.maxCelsius = main.temp_max;
-        this.minFahrenheit = calculateFahrenheit(main.temp_min);
-        this.maxFahrenheit = calculateFahrenheit(main.temp_max);
-        this.humidity = mian.humidity;
+        this.minFahrenheit = this.calculateFahrenheit(main.temp_min);
+        this.maxFahrenheit = this.calculateFahrenheit(main.temp_max);
+        this.humidity = main.humidity;
         this.weather = weather.main;
         this.weatherDesc = weather.description;
         this.windSpeed = wind.speed;
-        this.windDirection = calculateWindDirection(wind.deg);
+        this.windDirection = this.calculateWindDirection(wind.deg);
     }
 
     calculateWindDirection(degree) {
