@@ -6,8 +6,9 @@ class CurrentWeather {
         this.minFahrenheit = this.calculateFahrenheit(main.temp_min);
         this.maxFahrenheit = this.calculateFahrenheit(main.temp_max);
         this.humidity = main.humidity;
-        this.weather = weather.main;
-        this.weatherDesc = weather.description;
+        this.weather = weather[0].main;
+        this.weatherDesc = weather[0].description;
+        this.weatherIcon = weather[0].icon;
         this.windSpeed = wind.speed;
         this.windDirection = this.calculateWindDirection(wind.deg);
     }
